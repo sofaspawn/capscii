@@ -1,2 +1,2 @@
 ## Capscii
-- Ascii representation of camera feed (starting with random images)
+- ASCII representation of camera feed (starting with random images)
