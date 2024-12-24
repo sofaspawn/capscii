@@ -1,9 +1,5 @@
 from PIL import Image
 
-img=Image.open("batman.jpg")
-#! /usr/bin/env python3
-from PIL import Image
-
 img=Image.open("geto.jpeg")
 px=img.load()
 (width,height)=img.size
