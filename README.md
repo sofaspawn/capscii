@@ -2,7 +2,10 @@
 - ASCII representation of camera feed (starting with random images)
 
 ## current status:
-![demo image](./demo.png)
+<div style="display: flex; justify-content: space-between;">
+    <img src="./megumi.jpg" alt="test_image" width="45%" />
+    <img src="./demo.png" alt="pixelated image" width="45%" />
+</div>
 
 ## TODO:
 - [x] load images
