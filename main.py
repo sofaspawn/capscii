@@ -1,4 +1,3 @@
-#! /usr/bin/env python3
 from PIL import Image
 
 img=Image.open("geto.jpeg")
@@ -14,3 +13,4 @@ for x in range(width):
 
 brightness_matrix=[(r+g+b)/3 for row in pixel_matrix for (r,g,b) in row]
 print(brightness_matrix)
+
