@@ -1,16 +1,16 @@
 #! /usr/bin/env python3
 from PIL import Image
+import numpy as np
 
-img=Image.open("geto.jpeg")
-px=img.load()
-(width,height)=img.size
+def get_brightness_matrix(pixel_matrix):
+    return [0.21*r + 0.72*g + 0.07*b for row in pixel_matrix for (r,g,b) in row]
 
-pixel_matrix=[[0 for _ in range(height)] for _ in range(width)]
+def main():
+    img=Image.open("geto.jpeg")
+    px_arr = np.array(img)
 
-for x in range(width):
-    for y in range(height):
-        pixel_matrix[x][y]=(px[x,y])
-#print(pixel_matrix)
+    brightness_matrix = get_brightness_matrix(px_arr)
+    print(brightness_matrix)
 
-brightness_matrix=[(r+g+b)/3 for row in pixel_matrix for (r,g,b) in row]
-print(brightness_matrix)
+if __name__ == "__main__":
+    main()
