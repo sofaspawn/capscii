@@ -29,11 +29,20 @@ def render_ascii(ascii_matrix):
             print(char, end="")
         print()
 
+def downscaling(img):
+    nwidth = img.width // 4
+    nheight = img.height // 4
+
+    downscaled = img.resize((nwidth, nheight))
+    return downscaled
+
 def main():
     ascii = "`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
-    img = Image.open("batman.jpg")
+    img = Image.open("megumi.jpg")
 
-    px_arr = np.array(img)
+    nimg = downscaling(img)
+
+    px_arr = np.array(nimg)
 
     brightness_matrix = get_brightness_matrix(px_arr)
     ascii_matrix = brightness_to_ascii(ascii, brightness_matrix)
