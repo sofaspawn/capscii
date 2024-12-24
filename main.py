@@ -5,10 +5,12 @@ import numpy as np
 
 def get_brightness_matrix(pixel_matrix):
     brightness_matrix = np.zeros((pixel_matrix.shape[0], pixel_matrix.shape[1]))
+
     for i in range(len(pixel_matrix)):
         for j in range(len(pixel_matrix[i])):
             r, g, b = pixel_matrix[i][j]
             brightness_matrix[i][j] = 0.21*r + 0.72*g + 0.07*b
+
     return brightness_matrix
 
 def brightness_to_ascii(ascii, brightness_matrix):
@@ -29,7 +31,7 @@ def render_ascii(ascii_matrix):
 
 def main():
     ascii = "`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
-    img = Image.open("geto.jpeg")
+    img = Image.open("batman.jpg")
 
     px_arr = np.array(img)
 
