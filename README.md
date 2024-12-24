@@ -7,6 +7,15 @@
     <img src="./demo.png" alt="pixelated image" width="45%" />
 </div>
 
+## Problems:
+- too slow for any real use case
+- not optimized
+- image dimensions are messed up
+
+## Potential solutions:
+- implement the same in C/rust or similarly performant language
+- or be happy with the current state
+
 ## TODO:
 - [x] load images
 - [x] get brightness value of each pixel. (used weighted luminosity values)
